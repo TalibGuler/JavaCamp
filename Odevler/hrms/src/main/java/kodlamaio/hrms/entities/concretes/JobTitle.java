@@ -6,9 +6,13 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
 @Entity // Classın ne olduğunu belirtir.
 @Table(name = "job_titles") // veritabanında hangi tabloya karşılık geldiğini gösterir.
 public class JobTitle {
@@ -20,14 +24,4 @@ public class JobTitle {
 
 	@Column(name = "title")
 	private String title;
-
-	public JobTitle(int id, String title) {
-		super();
-		this.id = id;
-		this.title = title;
-	}
-
-	public JobTitle() {
-	
-	}
 }

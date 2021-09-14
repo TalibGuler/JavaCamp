@@ -6,8 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import kodlamaio.hrms.business.abstracts.JobTitleService;
+import kodlamaio.hrms.core.utilities.results.DataResult;
+import kodlamaio.hrms.core.utilities.results.SuccessDataResult;
 import kodlamaio.hrms.dataAccess.abstracts.JobTitleDao;
 import kodlamaio.hrms.entities.concretes.JobTitle;
+
 
 @Service // bu class service görevi görecek bilgisini veriyoruz.
 public class JobTitleManager implements JobTitleService {
@@ -21,9 +24,11 @@ public class JobTitleManager implements JobTitleService {
 	}
 
 	@Override
-	public List<JobTitle> getAll() {
+	public DataResult<List<JobTitle>> getAll() {
 
-		return this.jobTitleDao.findAll();
+		return new SuccessDataResult<List<JobTitle>>(this.jobTitleDao.findAll(),"Data listelendi.");
+
+
 	}
 
 }
