@@ -1,1 +1,1 @@
-# JavaKamp
+# JavaCamp
