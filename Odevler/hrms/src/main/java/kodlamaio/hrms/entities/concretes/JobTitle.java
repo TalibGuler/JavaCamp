@@ -3,6 +3,7 @@ package kodlamaio.hrms.entities.concretes;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -18,7 +19,7 @@ import lombok.NoArgsConstructor;
 public class JobTitle {
 
 	@Id
-	@GeneratedValue // id bir bir artacak şekilde olması için.
+	@GeneratedValue(strategy=GenerationType.IDENTITY) // id bir bir artacak şekilde olması için.
 	@Column(name = "id")
 	private int id;
 

@@ -28,7 +28,6 @@ public class JobTitleManager implements JobTitleService {
 
 		return new SuccessDataResult<List<JobTitle>>(this.jobTitleDao.findAll(),"Data listelendi.");
 
-
 	}
 
 }

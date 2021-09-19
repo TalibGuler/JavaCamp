@@ -16,24 +16,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name="employers")
-public class Employer {
+@Table(name="users")
+public class User {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name="user_id")
-	private int userId;
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
+	private int Id;
 	
-	@Column(name="company_name")
-	private String companyName;
-	
-	@Column(name="web_address")
-	private String webAddress;
-	
-	@Column(name="phone_number")
-	private String phoneNumber;
-	
-	@Column(name="is_activated")
-	private boolean isActivated;
+	@Column(name="email")
+	private String Email;
+
+	@Column(name="password")
+	private String Password;
 	
 }
